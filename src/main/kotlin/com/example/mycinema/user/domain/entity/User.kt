@@ -1,4 +1,4 @@
-package com.example.mycinema.user.domain.service.entity
+package com.example.mycinema.user.domain.entity
 
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
@@ -27,4 +27,5 @@ class User(
     @Column
     var email: String = email
     protected set
+
 }

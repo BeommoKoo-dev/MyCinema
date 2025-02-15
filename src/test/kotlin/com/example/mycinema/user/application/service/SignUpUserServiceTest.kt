@@ -1,4 +1,4 @@
-package com.example.mycinema.user.domain.service
+package com.example.mycinema.user.application.service
 
 import com.example.mycinema.user.adapter.`in`.dto.request.SignUpUserRequestDto
 import com.example.mycinema.user.application.port.out.SingUpUserPort

@@ -1,6 +1,6 @@
 package com.example.mycinema.user.adapter.`in`.dto.response
 
-import com.example.mycinema.user.domain.service.entity.User
+import com.example.mycinema.user.domain.entity.User
 
 data class SignUpUserResponseDto(
     val name: String,
