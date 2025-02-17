@@ -18,7 +18,8 @@ class User(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = 0
+    var id: Long = 0
+    protected set
 
     @Column
     var name: String = name

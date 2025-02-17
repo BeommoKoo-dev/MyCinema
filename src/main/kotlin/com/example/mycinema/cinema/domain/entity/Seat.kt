@@ -14,7 +14,7 @@ import jakarta.persistence.Table
 
 @Table(name = "seats")
 @Entity
-data class Seat(
+class Seat(
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "cinema_id")
     val cinema: Cinema,
@@ -24,7 +24,8 @@ data class Seat(
 ) {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = 0
+    var id: Long = 0
+    protected set
 
     val row: Int
 
