@@ -29,8 +29,17 @@ class Cinema(
     @Column
     val seats: MutableList<Seat> = mutableListOf()
 
-    fun addSeat(seat: Seat): Unit {
+    fun addSeat(seat: Seat) {
         seats.add(seat)
+    }
+
+    fun findSeat(seatId: Long): Seat {
+        for (seat in seats) {
+            if (seat.id == seatId) {
+                return seat
+            }
+        }
+        throw RuntimeException("No seat found")
     }
 
 }

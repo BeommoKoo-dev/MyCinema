@@ -34,5 +34,14 @@ class Seat(
     init {
         this.row = cinema.seats.size % 10 + 1
         this.column = cinema.seats.size / 10 + 1
+        cinema.addSeat(this)
+    }
+
+    fun isAvailable(): Boolean {
+        return status.equals(SeatStatus.AVAILABLE)
+    }
+
+    fun reserved() {
+        this.status = SeatStatus.RESERVED
     }
 }

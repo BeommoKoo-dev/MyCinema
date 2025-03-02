@@ -18,8 +18,7 @@ class RegisterCinemaService(
 
         val cinema = Cinema(requestDto.cinemaNumber)
         for (i: Int in 1..requestDto.seatCount) {
-            val seat = Seat(cinema)
-            cinema.addSeat(seat)
+            Seat(cinema)
         }
         registerCinemaPort.register(cinema)
 
